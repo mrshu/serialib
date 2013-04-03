@@ -16,4 +16,7 @@ install: $(TARGET)
 example: example.c
 	$(CC) example.c -lserialib -o ex
 
+clean:
+	rm *.o *.a
+
 
