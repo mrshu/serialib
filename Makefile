@@ -16,6 +16,10 @@ install: $(TARGET)
 example: example.c $(TARGET)
 	$(CC) example.c -lserialib -L. -I. -o example
 
+example-write: example-write.c $(TARGET)
+	$(CC) example-write.c -lserialib -L. -I. -o example-write
+
+
 clean:
 	rm -rf example *.o *.a
 
