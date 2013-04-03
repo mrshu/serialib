@@ -17,6 +17,6 @@ example: example.c
 	$(CC) example.c -lserialib -L. -I. -o ex
 
 clean:
-	rm *.o *.a
+	rm -rf example *.o *.a
 
 
