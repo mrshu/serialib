@@ -5,12 +5,15 @@ TARGET=serialib
 
 serialib.o: serialib.c
 	$(CC) -c serialib.c
-install: serialib.o
+
+$(TARGET):
 	$(CROSS_COMPILE)ar rcs lib$(TARGET).a serialib.o
+
+install: $(TARGET)
 	install lib$(TARGET).a /usr/lib/lib$(TARGET).a
 	install *.h /usr/include/
 
-example: example1.c
-	$(CC) example1.c -lserialib -o ex
+example: example.c
+	$(CC) example.c -lserialib -o ex
 
 
